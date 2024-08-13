@@ -49,6 +49,8 @@ html {
 body {
   box-sizing: border-box;
   min-height: 100vh;
+  background-color: var(--rose-50);
+  padding: 2.4rem;
 }
 
 /*UTILITY CLASSES*/
