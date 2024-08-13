@@ -24,6 +24,12 @@
   color: var(--rose-900);
 }
 
+.dessert__cta:hover {
+  cursor: pointer;
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
 .dessert__text {
   display: grid;
   gap: var(--gap-1);

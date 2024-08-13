@@ -3,7 +3,7 @@ import styles from "./Cart.module.css";
 function Cart() {
   return (
     <section className={styles.cart}>
-      <h2 className={`${styles.cart__heading} heading-2`}>Your Cart (X)</h2>
+      <h2 className={`${styles.cart__heading} heading-2`}>Your Cart (0)</h2>
       <section className={styles.cart__container}>
         <img
           className={`${styles.cart__illustration}`}
