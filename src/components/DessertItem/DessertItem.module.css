@@ -1,0 +1,42 @@
+.dessert {
+  display: grid;
+}
+
+.dessert__image {
+  width: 100%;
+  border-radius: var(--gap-2);
+}
+
+.dessert__cta {
+  justify-self: center;
+  margin-top: -3rem;
+  margin-bottom: var(--gap-4);
+  width: 16rem;
+  background: var(--white);
+  padding: var(--gap-3);
+  border: 1px solid var(--rose-400);
+  border-radius: var(--gap-7);
+  display: flex;
+  gap: var(--gap-2);
+  align-items: center;
+  justify-content: center;
+  font-family: "Red Hat Text", sans-serif;
+  color: var(--rose-900);
+}
+
+.dessert__text {
+  display: grid;
+  gap: var(--gap-1);
+}
+
+.dessert__category {
+  color: var(--rose-500);
+}
+
+.dessert__name {
+  color: var(--rose-900);
+}
+
+.dessert__price {
+  color: var(--red);
+}
