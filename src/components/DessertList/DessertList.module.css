@@ -1,0 +1,17 @@
+.dessertList {
+  margin: var(--gap-6) 0;
+  display: grid;
+  gap: var(--gap-5);
+}
+
+@media screen and (width > 30em) {
+  .dessertList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (width > 48em) {
+  .dessertList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

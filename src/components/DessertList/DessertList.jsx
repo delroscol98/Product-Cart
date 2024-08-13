@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from "react";
 import DessertItem from "../DessertItem/DessertItem";
+import styles from "./DessertList.module.css";
 
 const BASE_URL = "http://localhost:8000/desserts";
 
@@ -53,7 +54,7 @@ function MenuList() {
   }, []);
 
   return (
-    <section className="menulist">
+    <section className={styles.dessertList}>
       {desserts.map((dessert) => (
         <DessertItem key={dessert.id} dessert={dessert} />
       ))}
