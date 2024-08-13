@@ -4,13 +4,27 @@
   gap: var(--gap-5);
 }
 
-@media screen and (width > 30em) {
+@media screen and (width >= 30em) {
+  .dessertList {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--gap-5);
+    row-gap: var(--gap-6);
+  }
+}
+
+@media screen and (width >= 48em) {
+  .dessertList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (width >= 62.5em) {
   .dessertList {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (width > 48em) {
+@media screen and (width >= 90em) {
   .dessertList {
     grid-template-columns: repeat(3, 1fr);
   }

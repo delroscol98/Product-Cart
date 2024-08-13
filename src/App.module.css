@@ -1,0 +1,13 @@
+.main {
+  display: grid;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (width >= 62.5em) {
+  .main {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--gap-6);
+  }
+}

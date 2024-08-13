@@ -50,7 +50,19 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   background-color: var(--rose-50);
-  padding: 2.4rem;
+  padding: var(--gap-5);
+}
+
+@media screen and (width >= 48em) {
+  body {
+    padding: var(--gap-7);
+  }
+}
+
+@media screen and (width >= 62.5em) {
+  body {
+    padding: var(--gap-8) 11.2rem;
+  }
 }
 
 /*UTILITY CLASSES*/

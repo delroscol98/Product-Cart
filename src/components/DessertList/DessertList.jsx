@@ -56,7 +56,7 @@ function MenuList() {
   return (
     <section className={styles.dessertList}>
       {desserts.map((dessert) => (
-        <DessertItem key={dessert.id} dessert={dessert} />
+        <DessertItem key={dessert.name} dessert={dessert} />
       ))}
     </section>
   );
