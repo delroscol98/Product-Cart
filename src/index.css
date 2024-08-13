@@ -1,3 +1,10 @@
+/*
+BREAKPOINTS
+
+23.4375em = 375px
+*/
+
+/*VARIABLES*/
 :root {
   --red: hsl(14, 86%, 42%);
   --green: hsl(159, 69%, 38%);
@@ -7,8 +14,19 @@
   --rose-400: hsl(7, 20%, 60%);
   --rose-500: hsl(12, 20%, 44%);
   --rose-900: hsl(14, 65%, 9%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --gap-1: 0.4rem;
+  --gap-2: 0.8rem;
+  --gap-3: 1.2rem;
+  --gap-4: 1.6rem;
+  --gap-5: 2.4rem;
+  --gap-6: 3.2rem;
+  --gap-7: 4rem;
+  --gap-8: 8.8rem;
 }
 
+/*CSS RESET*/
 *,
 *::after,
 *::before {
@@ -19,9 +37,47 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+@media screen and (width < 23.4375em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
   box-sizing: border-box;
   min-height: 100vh;
+}
+
+/*UTILITY CLASSES*/
+.heading-1 {
+  font-size: 5.6rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.heading-2 {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.para-1 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.para-2 {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.para-3 {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 600;
 }
