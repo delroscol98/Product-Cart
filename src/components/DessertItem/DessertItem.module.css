@@ -1,5 +1,6 @@
 .dessert {
   display: grid;
+  list-style: none;
 }
 
 .dessert__image {

@@ -2,7 +2,7 @@ import styles from "./DessertItem.module.css";
 
 function DessertItem({ dessert }) {
   return (
-    <article className={styles.dessert}>
+    <li className={styles.dessert}>
       <picture>
         <source media="(max-width: 425px)" srcSet={dessert.image.mobile} />
         <source media="(min-width: 768px)" srcSet={dessert.image.tablet} />
@@ -26,7 +26,7 @@ function DessertItem({ dessert }) {
           ${dessert.price.toFixed(2)}
         </p>
       </article>
-    </article>
+    </li>
   );
 }
 

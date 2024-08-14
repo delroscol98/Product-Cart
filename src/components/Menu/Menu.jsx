@@ -1,5 +1,3 @@
-import styles from "./Menu.module.css";
-
 function Menu({ children }) {
   return (
     <section>
