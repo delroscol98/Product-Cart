@@ -1,6 +1,19 @@
+import { useState } from "react";
+import AddToCartBtn from "../AddToCartBtn/AddToCartBtn";
+import IncrementDecrementBtn from "../IncrementDecrementBtn/IncrementDecrementBtn";
 import styles from "./DessertItem.module.css";
 
 function DessertItem({ dessert }) {
+  const [count, setCount] = useState(0);
+
+  const incrementHandler = () => {
+    setCount((count) => count + 1);
+  };
+
+  const decrementHandler = () => {
+    setCount((count) => count - 1);
+  };
+
   return (
     <li className={styles.dessert}>
       <picture>
@@ -13,10 +26,15 @@ function DessertItem({ dessert }) {
           alt={dessert.name}
         />
       </picture>
-      <button className={`${styles.dessert__cta} para-3`}>
-        <img src="../../images/icon-add-to-cart.svg" alt="icon add to cart" />
-        Add to Cart
-      </button>
+      {count < 1 ? (
+        <AddToCartBtn onIncrement={incrementHandler} />
+      ) : (
+        <IncrementDecrementBtn
+          count={count}
+          onIncrement={incrementHandler}
+          onDecrement={decrementHandler}
+        />
+      )}
       <article className={styles.dessert__text}>
         <h3 className={`${styles.dessert__category} para-2`}>
           {dessert.category}

@@ -8,29 +8,6 @@
   border-radius: var(--gap-2);
 }
 
-.dessert__cta {
-  justify-self: center;
-  margin-top: -3rem;
-  margin-bottom: var(--gap-4);
-  width: 16rem;
-  background: var(--white);
-  padding: var(--gap-3);
-  border: 1px solid var(--rose-400);
-  border-radius: var(--gap-7);
-  display: flex;
-  gap: var(--gap-2);
-  align-items: center;
-  justify-content: center;
-  font-family: "Red Hat Text", sans-serif;
-  color: var(--rose-900);
-}
-
-.dessert__cta:hover {
-  cursor: pointer;
-  color: var(--red);
-  border: 1px solid var(--red);
-}
-
 .dessert__text {
   display: grid;
   gap: var(--gap-1);
