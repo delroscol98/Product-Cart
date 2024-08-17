@@ -12,8 +12,7 @@ function Cart() {
       <h2 className={`${styles.cart__heading} heading-2`}>
         Your Cart ({cart.length})
       </h2>
-      {/* <EmptyCart /> */}
-      <NonEmptyCart />
+      {cart.length > 0 ? <NonEmptyCart /> : <EmptyCart />}
     </section>
   );
 }
