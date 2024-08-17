@@ -1,6 +1,9 @@
+import { useCart } from "../../contexts/CartContext";
 import styles from "./CartItem.module.css";
 
 function CartItem({ cartItem }) {
+  const { handleDeleteDessertFromCart } = useCart();
+
   return (
     <li className={styles.cartItem}>
       <article className={styles.cartItem__container}>
@@ -17,7 +20,10 @@ function CartItem({ cartItem }) {
           </p>
         </article>
       </article>
-      <button className={styles.cartItem__btn}>
+      <button
+        className={styles.cartItem__btn}
+        onClick={() => handleDeleteDessertFromCart(cartItem.id)}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"

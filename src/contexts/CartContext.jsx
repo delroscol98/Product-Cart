@@ -55,6 +55,11 @@ const reducer = (state, action) => {
         ...state,
         cart: [...state.cart, action.payload],
       };
+    case "deleteDessert":
+      return {
+        ...state,
+        cart: state.cart.filter((cartItem) => cartItem.id !== action.payload),
+      };
     default:
       throw new Error("Action not recognised");
   }
@@ -67,8 +72,14 @@ function CartProvider({ children }) {
     dispatch({ type: "addDessert", payload: { ...dessert, count: 1 } });
   };
 
+  const handleDeleteDessertFromCart = (id) => {
+    dispatch({ type: "deleteDessert", payload: id });
+  };
+
   return (
-    <CartContext.Provider value={{ cart, handleAddDessertToCart }}>
+    <CartContext.Provider
+      value={{ cart, handleAddDessertToCart, handleDeleteDessertFromCart }}
+    >
       {children}
     </CartContext.Provider>
   );
