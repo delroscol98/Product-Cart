@@ -6,9 +6,45 @@ const CartContext = createContext();
 
 const initialState = {
   cart: [
-    { name: "Classic Tiramisu", price: 5.5, count: 1 },
-    { name: "Vanilla Bean Creme Brulee", price: 7, count: 4 },
-    { name: "Vanilla Panna Cotta", price: 6.5, count: 2 },
+    {
+      image: {
+        thumbnail: "../images/image-tiramisu-thumbnail.jpg",
+        mobile: "../images/image-tiramisu-mobile.jpg",
+        tablet: "../images/image-tiramisu-tablet.jpg",
+        desktop: "../images/image-tiramisu-desktop.jpg",
+      },
+      name: "Classic Tiramisu",
+      category: "Tiramisu",
+      price: 5.5,
+      id: "6fb8",
+      count: 1,
+    },
+    {
+      image: {
+        thumbnail: "../images/image-creme-brulee-thumbnail.jpg",
+        mobile: "../images/image-creme-brulee-mobile.jpg",
+        tablet: "../images/image-creme-brulee-tablet.jpg",
+        desktop: "../images/image-creme-brulee-desktop.jpg",
+      },
+      name: "Vanilla Bean Crème Brûlée",
+      category: "Crème Brûlée",
+      price: 7,
+      id: "2288",
+      count: 4,
+    },
+    {
+      image: {
+        thumbnail: "../images/image-panna-cotta-thumbnail.jpg",
+        mobile: "../images/image-panna-cotta-mobile.jpg",
+        tablet: "../images/image-panna-cotta-tablet.jpg",
+        desktop: "../images/image-panna-cotta-desktop.jpg",
+      },
+      name: "Vanilla Panna Cotta",
+      category: "Panna Cotta",
+      price: 6.5,
+      id: "ae6a",
+      count: 2,
+    },
   ],
 };
 
