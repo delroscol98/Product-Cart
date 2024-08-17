@@ -9,7 +9,7 @@ function NonEmptyCart() {
     <>
       <ul className={styles.cart}>
         {cart.map((cartItem) => (
-          <CartItem key={cartItem.id} cartItem={cartItem} />
+          <CartItem key={cartItem.name} cartItem={cartItem} />
         ))}
       </ul>
       <section className={styles.cart__totalContainer}>

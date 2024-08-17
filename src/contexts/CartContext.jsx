@@ -6,9 +6,9 @@ const CartContext = createContext();
 
 const initialState = {
   cart: [
-    { name: "Classic Tiramisu", price: 5.5, id: "7049", count: 1 },
-    { name: "Vanilla Bean Creme Brulee", price: 7, id: "fe6a", count: 4 },
-    { name: "Vanilla Panna Cotta", price: 6.5, id: "999c", count: 2 },
+    { name: "Classic Tiramisu", price: 5.5, count: 1 },
+    { name: "Vanilla Bean Creme Brulee", price: 7, count: 4 },
+    { name: "Vanilla Panna Cotta", price: 6.5, count: 2 },
   ],
 };
 
