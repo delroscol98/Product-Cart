@@ -1,4 +1,4 @@
-.cart {
+.cart__section {
   padding: var(--gap-5);
   background-color: var(--white);
   display: grid;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (width >= 62.5em) {
-  .cart {
+  .cart__section {
     align-self: flex-start;
     min-width: 30%;
     padding-bottom: var(--gap-7);
@@ -16,18 +16,4 @@
 
 .cart__heading {
   color: var(--red);
-}
-
-.cart__container {
-  display: grid;
-  gap: var(--gap-4);
-}
-
-.cart__illustration {
-  justify-self: center;
-}
-
-.cart__paragraph {
-  text-align: center;
-  color: var(--rose-500);
 }

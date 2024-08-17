@@ -1,0 +1,13 @@
+.cart__container {
+  display: grid;
+  gap: var(--gap-4);
+}
+
+.cart__illustration {
+  justify-self: center;
+}
+
+.cart__paragraph {
+  text-align: center;
+  color: var(--rose-500);
+}

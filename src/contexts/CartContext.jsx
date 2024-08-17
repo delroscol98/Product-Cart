@@ -5,17 +5,20 @@ import { createContext } from "react";
 const CartContext = createContext();
 
 const initialState = {
-  cart: {
-    "Classic Tiramisu": 1,
-    "Vanilla Bean Creme Brulee": 4,
-    "Vanilla Panna Cotta": 2,
-  },
+  cart: [
+    { name: "Classic Tiramisu", price: 5.5, id: "7049", count: 1 },
+    { name: "Vanilla Bean Creme Brulee", price: 7, id: "fe6a", count: 4 },
+    { name: "Vanilla Panna Cotta", price: 6.5, id: "999c", count: 2 },
+  ],
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "addDessert":
-
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
+      };
     default:
       throw new Error("Action not recognised");
   }
@@ -24,7 +27,11 @@ const reducer = (state, action) => {
 function CartProvider({ children }) {
   const [{ cart }, dispatch] = useReducer(reducer, initialState);
 
-  return <CartContext.Provider value={{}}>{children}</CartContext.Provider>;
+  return (
+    <CartContext.Provider value={{ cart, dispatch }}>
+      {children}
+    </CartContext.Provider>
+  );
 }
 
 function useCart() {
