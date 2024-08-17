@@ -27,7 +27,7 @@ function DessertItem({ dessert }) {
         />
       </picture>
       {count < 1 ? (
-        <AddToCartBtn onIncrement={incrementHandler} />
+        <AddToCartBtn dessert={dessert} onIncrement={incrementHandler} />
       ) : (
         <IncrementDecrementBtn
           count={count}

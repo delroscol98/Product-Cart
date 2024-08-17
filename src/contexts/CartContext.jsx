@@ -63,8 +63,12 @@ const reducer = (state, action) => {
 function CartProvider({ children }) {
   const [{ cart }, dispatch] = useReducer(reducer, initialState);
 
+  const handleAddDessertToCart = (dessert) => {
+    dispatch({ type: "addDessert", payload: { ...dessert, count: 1 } });
+  };
+
   return (
-    <CartContext.Provider value={{ cart, dispatch }}>
+    <CartContext.Provider value={{ cart, handleAddDessertToCart }}>
       {children}
     </CartContext.Provider>
   );
