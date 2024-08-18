@@ -1,7 +1,7 @@
 import { useCart } from "../../contexts/CartContext";
 import styles from "./IncrementDecrementBtn.module.css";
 
-function IncrementDecrementBtn({ dessert, count, onIncrement, onDecrement }) {
+function IncrementDecrementBtn({ dessert, count }) {
   const { handleAddDessertToCart, handleMinusDessertFromCart } = useCart();
 
   return (
@@ -9,7 +9,7 @@ function IncrementDecrementBtn({ dessert, count, onIncrement, onDecrement }) {
       <button
         className={styles.btn__decrement}
         onClick={() => {
-          onDecrement(), handleMinusDessertFromCart(dessert);
+          handleMinusDessertFromCart(dessert);
         }}
       >
         <svg
@@ -26,7 +26,7 @@ function IncrementDecrementBtn({ dessert, count, onIncrement, onDecrement }) {
       <button
         className={styles.btn__increment}
         onClick={() => {
-          onIncrement(), handleAddDessertToCart(dessert);
+          handleAddDessertToCart(dessert);
         }}
       >
         <svg
