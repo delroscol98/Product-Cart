@@ -7,7 +7,8 @@ function AddToCartBtn({ dessert }) {
   return (
     <button
       className={`${styles.btn} para-3`}
-      onClick={() => {
+      onClick={(e) => {
+        e.preventDefault();
         handleAddDessertToCart(dessert);
       }}
     >

@@ -8,7 +8,8 @@ function IncrementDecrementBtn({ dessert, count }) {
     <article className={`${styles.btn} para-3`}>
       <button
         className={styles.btn__decrement}
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
           handleMinusDessertFromCart(dessert);
         }}
       >
@@ -25,7 +26,8 @@ function IncrementDecrementBtn({ dessert, count }) {
       {count}
       <button
         className={styles.btn__increment}
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
           handleAddDessertToCart(dessert);
         }}
       >

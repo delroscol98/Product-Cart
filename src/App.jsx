@@ -5,12 +5,12 @@ import styles from "./App.module.css";
 
 function App() {
   return (
-    <main className={styles.main}>
+    <form className={styles.main}>
       <Menu>
         <MenuList />
       </Menu>
       <Cart />
-    </main>
+    </form>
   );
 }
 
