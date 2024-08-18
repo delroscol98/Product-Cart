@@ -6,6 +6,7 @@ import styles from "./Cart.module.css";
 
 function Cart() {
   const { cart } = useCart();
+  const total = cart.reduce((acc, curr) => acc + curr.price * curr.count, 0);
 
   return (
     <section className={styles.cart__section}>

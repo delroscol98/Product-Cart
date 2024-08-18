@@ -4,6 +4,7 @@ import styles from "./NonEmptyCart.module.css";
 
 function NonEmptyCart() {
   const { cart } = useCart();
+  const total = cart.reduce((acc, curr) => acc + curr.price * curr.count, 0);
 
   return (
     <>
@@ -16,7 +17,9 @@ function NonEmptyCart() {
         <p className={`${styles.cart__totalContainer__text} para-2`}>
           Order Total
         </p>
-        <p className={`${styles.cart__totalContainer__total} heading-2`}>$0</p>
+        <p className={`${styles.cart__totalContainer__total} heading-2`}>
+          ${total.toFixed(2)}
+        </p>
       </section>
       <section className={styles.cart__carbon}>
         <img src="../../images/icon-carbon-neutral.svg" alt="icon carbon" />
