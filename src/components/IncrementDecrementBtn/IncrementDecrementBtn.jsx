@@ -1,9 +1,17 @@
+import { useCart } from "../../contexts/CartContext";
 import styles from "./IncrementDecrementBtn.module.css";
 
-function IncrementDecrementBtn({ count, onIncrement, onDecrement }) {
+function IncrementDecrementBtn({ dessert, count, onIncrement, onDecrement }) {
+  const { handleAddDessertToCart } = useCart();
+
   return (
     <article className={`${styles.btn} para-3`}>
-      <button className={styles.btn__decrement} onClick={onDecrement}>
+      <button
+        className={styles.btn__decrement}
+        onClick={() => {
+          onDecrement();
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"
@@ -15,7 +23,12 @@ function IncrementDecrementBtn({ count, onIncrement, onDecrement }) {
         </svg>
       </button>
       {count}
-      <button className={styles.btn__increment} onClick={onIncrement}>
+      <button
+        className={styles.btn__increment}
+        onClick={() => {
+          onIncrement(), handleAddDessertToCart(dessert);
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"

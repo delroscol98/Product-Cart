@@ -30,6 +30,7 @@ function DessertItem({ dessert }) {
         <AddToCartBtn dessert={dessert} onIncrement={incrementHandler} />
       ) : (
         <IncrementDecrementBtn
+          dessert={dessert}
           count={count}
           onIncrement={incrementHandler}
           onDecrement={decrementHandler}
