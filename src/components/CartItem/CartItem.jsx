@@ -22,7 +22,7 @@ function CartItem({ cartItem }) {
       </article>
       <button
         className={styles.cartItem__btn}
-        onClick={() => handleDeleteDessertFromCart(cartItem.id)}
+        onClick={() => handleDeleteDessertFromCart(cartItem)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
