@@ -50,11 +50,27 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "addDessert":
-      return {
-        ...state,
-        cart: [...state.cart, action.payload],
-      };
+    case "addDessert": {
+      const existingCartItemIndex = state.cart.findIndex(
+        (cartItem) => cartItem.id === action.payload.id
+      );
+      const existingCartItem = state.cart[existingCartItemIndex];
+
+      if (existingCartItem) {
+        const updatedItem = {
+          ...existingCartItem,
+          count: existingCartItem.count + 1,
+        };
+        const updatedItems = [...state.cart];
+        updatedItems[existingCartItemIndex] = updatedItem;
+        return { ...state, cart: updatedItems };
+      } else {
+        return {
+          ...state,
+          cart: [...state.cart, { ...action.payload, count: 1 }],
+        };
+      }
+    }
     case "deleteDessert":
       return {
         ...state,
@@ -69,7 +85,7 @@ function CartProvider({ children }) {
   const [{ cart }, dispatch] = useReducer(reducer, initialState);
 
   const handleAddDessertToCart = (dessert) => {
-    dispatch({ type: "addDessert", payload: { ...dessert, count: 1 } });
+    dispatch({ type: "addDessert", payload: dessert });
   };
 
   const handleDeleteDessertFromCart = (id) => {
