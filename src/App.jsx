@@ -3,8 +3,10 @@ import MenuList from "./components/DessertList/DessertList";
 import Cart from "./components/Cart/Cart";
 import styles from "./App.module.css";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
+import { useCart } from "./contexts/CartContext";
 
 function App() {
+  const { showModal } = useCart();
   return (
     <>
       <form className={styles.main}>
@@ -13,7 +15,7 @@ function App() {
         </Menu>
         <Cart />
       </form>
-      <ConfirmationModal />
+      {showModal && <ConfirmationModal />}
     </>
   );
 }

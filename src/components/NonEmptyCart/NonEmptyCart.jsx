@@ -3,7 +3,7 @@ import CartItem from "../CartItem/CartItem";
 import styles from "./NonEmptyCart.module.css";
 
 function NonEmptyCart() {
-  const { cart } = useCart();
+  const { cart, handleConfirmOrder } = useCart();
   const total = cart.reduce((acc, curr) => acc + curr.price * curr.count, 0);
 
   return (
@@ -27,7 +27,13 @@ function NonEmptyCart() {
           This is a <strong>carbon-neutral</strong> delivery
         </p>
       </section>
-      <button className={`${styles.cart__confirmBtn} para-1`}>
+      <button
+        className={`${styles.cart__confirmBtn} para-1`}
+        onClick={(e) => {
+          e.preventDefault();
+          handleConfirmOrder();
+        }}
+      >
         Confirm Order
       </button>
     </>

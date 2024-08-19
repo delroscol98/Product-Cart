@@ -3,12 +3,12 @@ import Modal from "../Modal/Modal";
 import styles from "./ConfirmationModal.module.css";
 
 function ConfirmationModal() {
-  const { cart } = useCart();
+  const { cart, showModal, handleNewOrder } = useCart();
 
   const total = cart.reduce((acc, curr) => acc + curr.price * curr.count, 0);
 
   return (
-    <Modal open={true}>
+    <Modal open={showModal}>
       <header className={styles.modal__header}>
         <img
           className={styles.modal__icon}
@@ -64,7 +64,15 @@ function ConfirmationModal() {
           </p>
         </section>
       </section>
-      <button className={styles.modal__btn}>Start New Order</button>
+      <button
+        className={styles.modal__btn}
+        onClick={(e) => {
+          e.preventDefault();
+          handleNewOrder();
+        }}
+      >
+        Start New Order
+      </button>
     </Modal>
   );
 }

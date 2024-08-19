@@ -9,6 +9,8 @@ function Modal({ children, open }) {
   useEffect(() => {
     if (open) {
       dialogRef.current.showModal();
+    } else {
+      dialogRef.current.close();
     }
   }, [open]);
 
