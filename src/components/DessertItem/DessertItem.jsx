@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useCart } from "../../contexts/CartContext";
 import AddToCartBtn from "../AddToCartBtn/AddToCartBtn";
 import IncrementDecrementBtn from "../IncrementDecrementBtn/IncrementDecrementBtn";
