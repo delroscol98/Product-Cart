@@ -111,4 +111,11 @@
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 600;
+  transition: all 0.2s;
+}
+
+.modal__btn:hover,
+.modal__btn:focus {
+  cursor: pointer;
+  background-color: #952c0a;
 }

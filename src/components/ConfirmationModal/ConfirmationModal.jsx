@@ -5,6 +5,8 @@ import styles from "./ConfirmationModal.module.css";
 function ConfirmationModal() {
   const { cart } = useCart();
 
+  const total = cart.reduce((acc, curr) => acc + curr.price * curr.count, 0);
+
   return (
     <Modal open={true}>
       <header className={styles.modal__header}>
@@ -58,7 +60,7 @@ function ConfirmationModal() {
           <p
             className={`heading-2 ${styles.modal__cart__total__container__amount}`}
           >
-            $0.00
+            ${total.toFixed(2)}
           </p>
         </section>
       </section>
