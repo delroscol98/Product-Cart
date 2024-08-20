@@ -15,6 +15,7 @@
     min-width: 0;
     width: auto;
     max-width: 68.8rem;
+    height: max-content;
     border-radius: var(--gap-3);
     margin: auto;
   }
