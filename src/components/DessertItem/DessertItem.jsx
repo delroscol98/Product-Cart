@@ -7,7 +7,7 @@ function DessertItem({ dessert }) {
   const { cart } = useCart();
 
   const targetCartItemIndex = cart.findIndex(
-    (cartItem) => cartItem.id === dessert.id
+    (cartItem) => cartItem.name === dessert.name
   );
   const targetCartItem = cart[targetCartItemIndex];
   const count = targetCartItem?.count || 0;

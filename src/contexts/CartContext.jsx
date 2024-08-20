@@ -13,7 +13,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "addDessert": {
       const existingCartItemIndex = state.cart.findIndex(
-        (cartItem) => cartItem.id === action.payload.id
+        (cartItem) => cartItem.name === action.payload.name
       );
       const existingCartItem = state.cart[existingCartItemIndex];
 
