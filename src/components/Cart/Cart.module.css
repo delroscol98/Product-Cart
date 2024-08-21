@@ -4,7 +4,7 @@
   display: grid;
   gap: var(--gap-5);
   border-radius: var(--gap-3);
-  animation: moveInRight 0.7s ease-in-out;
+  animation: moveInBottom 0.7s ease-in-out;
 }
 
 @media screen and (width >= 62.5em) {
@@ -19,10 +19,10 @@
   color: var(--red);
 }
 
-@keyframes moveInRight {
+@keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateX(5rem);
+    transform: translateY(5rem);
   }
 
   100% {

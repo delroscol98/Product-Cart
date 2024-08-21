@@ -1,11 +1,11 @@
 .desserts {
-  animation: moveInLeft 0.7s ease-in-out;
+  animation: moveInTop 0.7s ease-in-out;
 }
 
-@keyframes moveInLeft {
+@keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateX(-5rem);
+    transform: translateY(-5rem);
   }
 
   100% {
