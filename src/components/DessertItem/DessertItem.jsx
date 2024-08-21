@@ -30,9 +30,9 @@ function DessertItem({ dessert }) {
         <IncrementDecrementBtn dessert={dessert} count={count} />
       )}
       <article className={styles.dessert__text}>
-        <h3 className={`${styles.dessert__category} para-2`}>
+        <h2 className={`${styles.dessert__category} para-2`}>
           {dessert.category}
-        </h3>
+        </h2>
         <p className={`${styles.dessert__name} para-1`}>{dessert.name}</p>
         <p className={`${styles.dessert__price} para-1`}>
           ${dessert.price.toFixed(2)}

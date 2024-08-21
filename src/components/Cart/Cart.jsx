@@ -8,9 +8,9 @@ function Cart() {
 
   return (
     <section className={styles.cart__section}>
-      <h2 className={`${styles.cart__heading} heading-2`}>
+      <h3 className={`${styles.cart__heading} heading-2`}>
         Your Cart ({cart.length})
-      </h2>
+      </h3>
       {cart.length > 0 ? <NonEmptyCart /> : <EmptyCart />}
     </section>
   );
