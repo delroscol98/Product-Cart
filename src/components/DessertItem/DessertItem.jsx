@@ -1,4 +1,4 @@
-import { useCart } from "../../contexts/CartContext";
+import useCart from "../../hooks/useCart";
 import AddToCartBtn from "../AddToCartBtn/AddToCartBtn";
 import IncrementDecrementBtn from "../IncrementDecrementBtn/IncrementDecrementBtn";
 import styles from "./DessertItem.module.css";

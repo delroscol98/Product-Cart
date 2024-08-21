@@ -1,4 +1,4 @@
-import { useCart } from "../../contexts/CartContext";
+import useCart from "../../hooks/useCart";
 import Modal from "../Modal/Modal";
 import styles from "./ConfirmationModal.module.css";
 

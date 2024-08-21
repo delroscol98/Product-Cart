@@ -1,12 +1,10 @@
-import { useCart } from "../../contexts/CartContext";
-import CartItem from "../CartItem/CartItem";
+import useCart from "../../hooks/useCart";
 import EmptyCart from "../EmptyCart/EmptyCart";
 import NonEmptyCart from "../NonEmptyCart/NonEmptyCart";
 import styles from "./Cart.module.css";
 
 function Cart() {
   const { cart } = useCart();
-  const total = cart.reduce((acc, curr) => acc + curr.price * curr.count, 0);
 
   return (
     <section className={styles.cart__section}>

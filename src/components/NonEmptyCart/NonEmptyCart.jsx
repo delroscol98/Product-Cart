@@ -1,4 +1,4 @@
-import { useCart } from "../../contexts/CartContext";
+import useCart from "../../hooks/useCart";
 import CartItem from "../CartItem/CartItem";
 import styles from "./NonEmptyCart.module.css";
 

@@ -3,7 +3,7 @@ import MenuList from "./components/DessertList/DessertList";
 import Cart from "./components/Cart/Cart";
 import styles from "./App.module.css";
 import ConfirmationModal from "./components/ConfirmationModal/ConfirmationModal";
-import { useCart } from "./contexts/CartContext";
+import useCart from "./hooks/useCart";
 
 function App() {
   const { showModal } = useCart();

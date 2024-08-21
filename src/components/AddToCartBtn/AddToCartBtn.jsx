@@ -1,4 +1,4 @@
-import { useCart } from "../../contexts/CartContext";
+import useCart from "../../hooks/useCart";
 import styles from "./AddToCartBtn.module.css";
 
 function AddToCartBtn({ dessert }) {
