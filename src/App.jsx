@@ -8,7 +8,7 @@ import useCart from "./hooks/useCart";
 function App() {
   const { showModal } = useCart();
   return (
-    <>
+    <main>
       <form className={styles.main}>
         <Desserts>
           <MenuList />
@@ -16,7 +16,7 @@ function App() {
         <Cart />
       </form>
       {showModal && <ConfirmationModal />}
-    </>
+    </main>
   );
 }
 
