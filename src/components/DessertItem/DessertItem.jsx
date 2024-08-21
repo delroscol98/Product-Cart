@@ -14,7 +14,7 @@ function DessertItem({ dessert }) {
 
   return (
     <li className={styles.dessert}>
-      <picture>
+      <picture role="complementary">
         <source media="(max-width: 425px)" srcSet={dessert.image.mobile} />
         <source media="(min-width: 768px)" srcSet={dessert.image.tablet} />
         <source media="(min-width: 1024px)" srcSet={dessert.image.desktop} />
@@ -29,7 +29,7 @@ function DessertItem({ dessert }) {
       ) : (
         <IncrementDecrementBtn dessert={dessert} count={count} />
       )}
-      <article className={styles.dessert__text}>
+      <article className={styles.dessert__text} role="complementary">
         <h2 className={`${styles.dessert__category} para-2`}>
           {dessert.category}
         </h2>
