@@ -34,7 +34,13 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/delroscol98/Product-Cart)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+<!--
+NOTE: To view the live site, download the file and run the following commands in the command line:
+1. npm install
+2. npm run server
+3. npm run dev
+ -->
 
 ## My process
 
