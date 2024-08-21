@@ -4,6 +4,7 @@
   display: grid;
   gap: var(--gap-5);
   border-radius: var(--gap-3);
+  animation: moveInRight 0.7s ease-in-out;
 }
 
 @media screen and (width >= 62.5em) {
@@ -16,4 +17,16 @@
 
 .cart__heading {
   color: var(--red);
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

@@ -34,7 +34,7 @@ const reducer = (state, action) => {
     }
     case "minusDessert": {
       const existingCartItemIndex = state.cart.findIndex(
-        (cartItem) => cartItem.id === action.payload.id
+        (cartItem) => cartItem.name === action.payload.name
       );
       const existingCartItem = state.cart[existingCartItemIndex];
 
@@ -53,7 +53,7 @@ const reducer = (state, action) => {
         return {
           ...state,
           cart: state.cart.filter(
-            (cartItem) => cartItem.id !== action.payload.id
+            (cartItem) => cartItem.name !== action.payload.name
           ),
         };
       }
@@ -62,7 +62,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: state.cart.filter(
-          (cartItem) => cartItem.id !== action.payload.id
+          (cartItem) => cartItem.name !== action.payload.name
         ),
       };
     case "confirmOrder":

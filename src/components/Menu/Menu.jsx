@@ -1,6 +1,8 @@
+import styles from "./Menu.module.css";
+
 function Menu({ children }) {
   return (
-    <section>
+    <section className={styles.desserts}>
       <h1 className="heading-1">Desserts</h1>
       {children}
     </section>
