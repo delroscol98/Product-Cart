@@ -8,6 +8,7 @@
   gap: var(--gap-6);
   border-top-left-radius: var(--gap-3);
   border-top-right-radius: var(--gap-3);
+  animation: moveInBottom 0.7s ease-in-out;
 }
 
 @media screen and (width > 26.5625em) {
@@ -29,4 +30,16 @@
 
 .modal::backdrop {
   background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

@@ -13,10 +13,12 @@
   justify-content: center;
   font-family: "Red Hat Text", sans-serif;
   color: var(--rose-900);
+  transition: all 0.2s;
 }
 
 .btn:hover {
   cursor: pointer;
   color: var(--red);
   border: 1px solid var(--red);
+  transform: translateY(-0.5rem);
 }

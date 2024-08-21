@@ -118,4 +118,5 @@
 .modal__btn:focus {
   cursor: pointer;
   background-color: #952c0a;
+  transform: translateY(-0.5rem);
 }

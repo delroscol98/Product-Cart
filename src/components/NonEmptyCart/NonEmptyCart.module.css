@@ -29,9 +29,11 @@
   border: none;
   border-radius: var(--gap-7);
   color: var(--white);
+  transition: all 0.2s;
 }
 
 .cart__confirmBtn:hover {
   cursor: pointer;
   background: #952c0a;
+  transform: translateY(-0.5rem);
 }

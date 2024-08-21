@@ -11,6 +11,11 @@
   justify-content: space-between;
   font-family: "Red Hat Text", sans-serif;
   color: var(--white);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-0.5rem);
 }
 
 .btn__decrement,
