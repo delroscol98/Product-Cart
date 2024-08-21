@@ -1,4 +1,4 @@
-import styles from "./Menu.module.css";
+import styles from "./Desserts.module.css";
 
 function Menu({ children }) {
   return (

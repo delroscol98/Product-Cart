@@ -4,16 +4,21 @@ import { useEffect } from "react";
 import DessertItem from "../DessertItem/DessertItem";
 import styles from "./DessertList.module.css";
 
-const BASE_URL = "http://localhost:8000/desserts";
+// DUMMY SERVER
+// const BASE_URL = "http://localhost:8000/desserts";
 
-function MenuList() {
+function DessertList() {
   const [desserts, setDesserts] = useState([]);
 
   const fetchDesserts = useCallback(async () => {
     try {
-      const res = await fetch(BASE_URL);
+      // const res = await fetch(BASE_URL);
+      // const data = await res.json();
+      // setDesserts(data)
+
+      const res = await fetch("../../data/data.json");
       const data = await res.json();
-      setDesserts(data);
+      setDesserts(data.desserts);
     } catch (err) {
       console.log(err);
     }
@@ -32,4 +37,4 @@ function MenuList() {
   );
 }
 
-export default MenuList;
+export default DessertList;
