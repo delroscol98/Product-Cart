@@ -8,8 +8,7 @@
     "build-local": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch data/data.json --port 8000 ",
-    "build": "npm-run-all server build-local"
+    "server": "json-server data/data.json --port 8000 "
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.1",
