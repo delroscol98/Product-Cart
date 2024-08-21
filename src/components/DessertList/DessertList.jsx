@@ -16,7 +16,7 @@ function DessertList() {
       // const data = await res.json();
       // setDesserts(data);
 
-      const res = await fetch("../../data/data.json");
+      const res = await fetch("../../../public/data/data.json");
       const data = await res.json();
       setDesserts(data.desserts);
     } catch (err) {
