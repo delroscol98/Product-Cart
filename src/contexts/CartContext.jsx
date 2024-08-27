@@ -36,11 +36,12 @@ const reducer = (state, action) => {
         (cartItem) => cartItem.name === action.payload.name
       );
       const existingCartItem = state.cart[existingCartItemIndex];
+      const count = existingCartItem.count;
 
-      if (existingCartItem.count > 0) {
+      if (count >= 2) {
         const updatedItem = {
           ...action.payload,
-          count: existingCartItem.count--,
+          count: count - 1,
         };
         let updatedItems = [...state.cart];
         updatedItems[existingCartItemIndex] = updatedItem;
